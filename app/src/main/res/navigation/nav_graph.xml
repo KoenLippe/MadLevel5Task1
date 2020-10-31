@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/NotepadFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.madlevel5task1.ui.NotePadFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_add_note">
-
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/AddNoteFragment"
         android:name="com.example.madlevel5task1.ui.AddNoteFragment"
-        android:label="@string/second_fragment_label"
+        android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_notepad">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_AddNoteFragment_toNotepadFragment"
+            app:destination="@id/NotepadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/NotepadFragment"
+        android:name="com.example.madlevel5task1.ui.NotePadFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_add_note">
+
+        <action
+            android:id="@+id/action_NotepadFragment_to_AddNoteFragment"
+            app:destination="@id/AddNoteFragment" />
     </fragment>
 </navigation>

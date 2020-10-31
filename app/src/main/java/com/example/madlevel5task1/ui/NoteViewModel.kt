@@ -21,7 +21,7 @@ class NoteViewModel(application: Application): AndroidViewModel(application) {
     val error = MutableLiveData<String>()
     val success = MutableLiveData<Boolean>()
 
-    private fun updateNote(title: String, text: String) {
+    fun updateNote(title: String, text: String) {
         val newNote = Note(
                 title = title,
                 lastUpdated = Date(),

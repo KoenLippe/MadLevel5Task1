@@ -7,19 +7,27 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
+import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import com.example.madlevel5task1.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-//            findNavController(this).navigate(R.id.action_FirstFragment_to_SecondFragment)
+        navController = findNavController(R.id.nav_host_fragment)
+
+        fab.setOnClickListener {
+            navController.navigate(
+                    R.id.action_NotepadFragment_to_AddNoteFragment
+            )
         }
     }
 

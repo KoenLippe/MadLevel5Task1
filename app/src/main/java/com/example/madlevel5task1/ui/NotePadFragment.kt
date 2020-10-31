@@ -5,10 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
 import com.example.madlevel5task1.R
 import kotlinx.android.synthetic.main.fragment_notepad.*
 
@@ -37,7 +35,6 @@ class NotePadFragment : Fragment() {
         noteViewModel.note.observe(viewLifecycleOwner, Observer { note ->
             note?.let {
                 tvNoteTitle.text = it.title
-                // TODO Add custom string for this
                 tvLastUpdated.text = getString(R.string.last_updated,
                         it.lastUpdated.toString())
                 tvNoteText.text = it.text
