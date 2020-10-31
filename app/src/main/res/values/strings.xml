@@ -12,5 +12,7 @@
     <string name="note">Note</string>
     <string name="save">Save</string>
     <string name="title">Title</string>
-    <string name="last_updated">Last updated</string>
+    <string name="last_updated">Last updated: %s</string>
+
+
 </resources>
