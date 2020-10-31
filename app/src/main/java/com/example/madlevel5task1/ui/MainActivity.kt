@@ -1,4 +1,4 @@
-package com.example.madlevel5task1
+package com.example.madlevel5task1.ui
 
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -6,6 +6,10 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import com.example.madlevel5task1.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,8 +19,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+//            findNavController(this).navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
     }
 
